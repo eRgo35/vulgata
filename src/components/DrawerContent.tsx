@@ -7,17 +7,9 @@ import {
   List,
   ListItemButton,
   MobileStepper,
-  Pagination,
-  Stack,
-  Step,
-  StepButton,
-  Stepper,
   styled,
-  Typography,
 } from "@mui/material";
-import { ButtonProps } from "@mui/material/Button";
 import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
-import { blue } from "@mui/material/colors";
 
 interface DrawerContentProps {
   vulgate: ParsedVulgata;
@@ -28,7 +20,7 @@ interface DrawerContentProps {
   toggleDrawer: (open: boolean) => void;
 }
 
-const steps = ["Select Book", "Select Chapter"];
+// const steps = ["Select Book", "Select Chapter"];
 
 interface ChapterButtonProps {
   selected: boolean;
@@ -69,9 +61,9 @@ const DrawerContent: FC<DrawerContentProps> = ({
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStep = (step: number) => () => {
-    setActiveStep(step);
-  };
+  // const handleStep = (step: number) => () => {
+  //   setActiveStep(step);
+  // };
 
   const handleBookSelect = (book: string) => {
     setBook(book);
